@@ -11,9 +11,7 @@ module SessionAnalyticsSpecs
 
   # define tests here  
   function sessionRatingBasedOnWeightedAverageOfMeanDelegatesRatingsAndMeanSpeakerParticipantsRatings()  
-    @test 4.1 == weightedAverage([0.3, 0.7])(sessionInfo)
+      @test weightedAverage([0.3, 0.7])(sessionInfo) == 4.1
+      @test weightedAverage([0.4, 0.6])(sessionInfo) == 3.8
   end
-  
 end
-
-
