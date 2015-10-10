@@ -3,12 +3,12 @@ module SessionAnalytics
   export SessionInfo, show, weightedAverage
 
   immutable SessionInfo
-    name::String
+    name::AbstractString
     meanFeedbackFromParticipants::Float64
     meanFeedbackFromSpeakers::Float64
   end
   
-  SessionInfo(name::String, feedbackFromParticipants::Array{Int64, 1}, feedbackFromSpeakers::Array{Int64, 1}) = 
+  SessionInfo(name::AbstractString, feedbackFromParticipants::Array{Int64, 1}, feedbackFromSpeakers::Array{Int64, 1}) = 
     SessionInfo(name, feedbackFromParticipants |> mean, feedbackFromSpeakers |> mean)
   
   show(io::IO, s::SessionInfo) = println(io, "$(s.name) [$(s.meanFeedbackFromParticipants),$(s.meanFeedbackFromSpeakers)]")
