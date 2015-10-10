@@ -1,5 +1,8 @@
-using SessionAnalytics
 using Base.Test
 
-# write your own tests here
-@test 1 == 1
+# add specs files below
+include("SessionAnalyticsSpecs.jl")
+
+
+SessionAnalyticsSpecs.run()
+
