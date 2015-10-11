@@ -1,6 +1,12 @@
+using SessionAnalytics
+
 function main(window)
     # plaintext("Hello, World!")
-    
+    codeJugalbandi = SessionInfo("CodeJugalbandi", [1, 2, 3], [4, 5, 6])
+    directFeedbackWeightedAvg = weightedAverage([0.3, 0.7])
+    feedbackOnCodeJugalbandi = codeJugalbandi |> directFeedbackWeightedAvg
+    plaintext("$feedbackOnCodeJugalbandi")
+      
     push!(window.assets, "widgets")
 
        inp = Input(Dict())
