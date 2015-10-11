@@ -11,9 +11,14 @@ feedbackOnCodeJugalbandi = codeJugalbandi |> directFeedbackWeightedAvg
 println(feedbackOnCodeJugalbandi)
 
 
-# Connect to SQLite and execute the query
+# Connect to SQLite and execute the query to get ResultSet
 with("sessions.db") do db
   rs = query(db, "select * from sessions")
-  typeof(rs)
   println(rs)
+end
+
+# Connect to SQLite and execute the query to get DataFrame
+with("sessions.db") do db
+  df = querydf(db, "select * from sessions")
+  println(df)
 end
