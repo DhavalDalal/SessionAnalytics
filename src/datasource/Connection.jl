@@ -1,5 +1,6 @@
 using SQLite
 
+# Loan My Resource
 function with(f::Function, dbName::String) 
   try
     db = SQLiteDB(dbName)
@@ -9,3 +10,5 @@ function with(f::Function, dbName::String)
     println(e)
   end
 end
+
+query(db::SQLiteDB, sql::String) = SQLite.query(db, sql)
