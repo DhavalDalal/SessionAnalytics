@@ -1,11 +1,6 @@
 using SQLite
 using Base.Test
 
-export run,
-        createTable,
-        insertSeedData,
-        dropTable,
-        verifyDataCreation
 
 function run(dbName::String)
   println("Connecting to database....$(dbName)")

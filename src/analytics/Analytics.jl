@@ -1,7 +1,3 @@
-export SessionInfo, 
-        show, 
-        weightedAverage
-
 immutable SessionInfo
   name::String
   meanFeedbackFromParticipants::Float64
