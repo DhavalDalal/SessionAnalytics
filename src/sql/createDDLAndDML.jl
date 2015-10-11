@@ -32,7 +32,7 @@ function insertSeedData(db)
 end
 
 function dropTable(db)
-  query(db, "DROP TABLE IF EXISTS sessions")
+  droptable(db, "sessions")
 end
 
 function verifyDataCreation(db)

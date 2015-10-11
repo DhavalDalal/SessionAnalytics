@@ -6,6 +6,8 @@ using SQLite
 include("analytics/Analytics.jl")
 export SessionInfo, show, weightedAverage
 
+include("datasource/Connections.jl")
+export with
 
 # include("ui/Render.jl")
 # include("analytics/Example.jl")
