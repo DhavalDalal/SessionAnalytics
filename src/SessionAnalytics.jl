@@ -7,7 +7,7 @@ include("analytics/Analytics.jl")
 export SessionInfo, show, weightedAverage
 
 include("datasource/Connection.jl")
-export with, query
+export with, query, querydf
 
 # include("ui/Render.jl")
 # include("analytics/Example.jl")
