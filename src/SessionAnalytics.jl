@@ -1,3 +1,5 @@
+module SessionAnalytics
+
 using Escher
 
 include("analytics/Analytics.jl")
@@ -9,3 +11,4 @@ println("You may then want to run CreateDDLAndDML.run() to create database and t
 # include("ui/Render.jl")
 # include("analytics/Example.jl")
 
+end
