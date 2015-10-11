@@ -1,7 +1,7 @@
 using SQLite
 using Base.Test
 
-function createSchemaAndInitialData(dbName::String) =
+createSchemaAndInitialData(dbName::String) =   
   createSchemaAndInitialData(SQLiteDB(dbName))
 
 function createSchemaAndInitialData(db::SQLiteDB) 
