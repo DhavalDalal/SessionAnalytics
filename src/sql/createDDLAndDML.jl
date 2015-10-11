@@ -1,7 +1,6 @@
 using SQLite
 using Base.Test
 
-
 function run(dbName::String)
   println("Connecting to database....$(dbName)")
   db = SQLiteDB(dbName)

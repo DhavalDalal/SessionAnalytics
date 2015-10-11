@@ -3,20 +3,14 @@ module SessionAnalytics
 using Escher
 
 include("analytics/Analytics.jl")
-export SessionInfo, 
-        show, 
-        weightedAverage
+export SessionInfo, show, weightedAverage
 
 
 # include("ui/Render.jl")
 # include("analytics/Example.jl")
 
 include("sql/createDDLAndDML.jl") 
-export run,
-        createTable,
-        insertSeedData,
-        dropTable,
-        verifyDataCreation
+export run, createTable, insertSeedData, dropTable, verifyDataCreation
 
 println("Make sure you have sqllite3 on your path (/usr/bin/sqlite3)")
 println("Go to sql folder in this project and run the command below:")
