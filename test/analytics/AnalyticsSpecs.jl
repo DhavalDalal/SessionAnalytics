@@ -1,4 +1,4 @@
-module SessionAnalyticsSpecs
+module AnalyticsSpecs
   using SessionAnalytics
   using Base.Test
 

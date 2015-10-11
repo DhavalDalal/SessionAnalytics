@@ -1,6 +1,6 @@
 using Base.Test
 
 # add specs files below
-include("SessionAnalyticsSpecs.jl")
+include("analytics/AnalyticsSpecs.jl")
 
-SessionAnalyticsSpecs.run()
+AnalyticsSpecs.run()
