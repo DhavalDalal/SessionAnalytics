@@ -3,10 +3,10 @@ using Base.Test
 
 function createSchemaAndInitialData(dbName::String)
   with(dbName) do db 
-    println("Dropping table...$(dbName)")
-    dropTable(db)
-    println("Creating table...$(dbName)")
     tableName = "sessions"
+    println("Dropping table...$(tableName) inside database $(dbName)")
+    dropTable(db, tableName)
+    println("Creating table...$(tableName) inside database $(dbName)")
     createTable(db, tableName)
     println("Inserting data into table...$(tableName)")
     insertSeedData(db, tableName)
