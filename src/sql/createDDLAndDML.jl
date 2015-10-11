@@ -1,10 +1,11 @@
 using SQLite
 using Base.Test
 
-function run(dbName::String)
-  println("Connecting to database....$(dbName)")
-  db = SQLiteDB(dbName)
-  println("Inserting data into table...sessions")
+function createSchemaAndInitialData(dbName::String) =
+  createSchemaAndInitialData(SQLiteDB(dbName))
+
+function createSchemaAndInitialData(db::SQLiteDB) 
+  println("Dropping table...sessions")
   dropTable(db)
   println("Creating table...sessions")
   createTable(db)
@@ -31,7 +32,7 @@ function insertSeedData(db)
 end
 
 function dropTable(db)
-  query(db, "DROP TABLE sessions")
+  query(db, "DROP TABLE IF EXISTS sessions")
 end
 
 function verifyDataCreation(db)
